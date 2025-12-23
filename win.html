@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Windows Software Downloads | NovaForge Studeeo</title>
+
+<style>
+:root {
+  --bg-dark: #050b1a;
+  --card-bg: #0b1530;
+  --blue: #4da3ff;
+  --purple: #8b5cf6;
+  --text: #e6e9ff;
+  --muted: #9aa4ff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #050b1a, #0a0f2e);
+  color: var(--text);
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(5, 11, 26, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+nav h1 {
+  font-size: 22px;
+  background: linear-gradient(90deg, var(--blue), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav a {
+  color: var(--muted);
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h2 {
+  font-size: 36px;
+}
+
+header p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: auto;
+}
+
+/* SOFTWARE GRID */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: linear-gradient(180deg, var(--card-bg), #070d22);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 0 25px rgba(139,92,246,0.15);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--blue);
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* BUTTON */
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, var(--blue), var(--purple));
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.download-btn:hover {
+  opacity: 0.85;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>NovaForge Studeeo</h1>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="windows-download.html">Windows</a>
+    <a href="news.html">News</a>
+  </div>
+</nav>
+
+<header>
+  <h2>Windows Software Downloads</h2>
+  <p>Official PC software, games, and tools developed by NovaForge Studeeo.  
+     Safe, lightweight, and optimized for Windows.</p>
+</header>
+
+<section class="container">
+
+  <div class="card">
+    <h3>🚗 NovaDrive 3D (Demo)</h3>
+    <p>
+      A lightweight 3D car driving game for Windows.  
+      Smooth controls, optimized graphics, and offline play.
+    </p>
+    <a href="#" class="download-btn">Download for Windows (.exe)</a>
+  </div>
+
+  <div class="card">
+    <h3>🛠 NovaForge ToolKit</h3>
+    <p>
+      Developer utility tools made for beginners and indie creators.  
+      Simple UI, fast performance.
+    </p>
+    <a href="#" class="download-btn">Download for Windows</a>
+  </div>
+
+  <div class="card">
+    <h3>🎮 NovaMini Games Pack</h3>
+    <p>
+      A collection of small PC games that run on low-end systems.  
+      No internet required.
+    </p>
+    <a href="#" class="download-btn">Download Pack</a>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 NovaForge Studeeo • Independent Student Developer  
+  <br>
+  Windows is a trademark of Microsoft. NovaForge Studio is not affiliated with Microsoft.
+</footer>
+
+</body>
+</html>
