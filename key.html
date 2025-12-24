@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Keypad Games | NovaForge Studeeo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#111,#222);
+  color:#fff;
+}
+header{
+  background:#000;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1{color:#ffcc00;}
+nav a{
+  margin-left:15px;
+  color:#bbb;
+  text-decoration:none;
+}
+nav a:hover{color:#fff;}
+
+.hero{
+  text-align:center;
+  padding:40px 15px;
+}
+.hero h2{
+  font-size:30px;
+  color:#ffcc00;
+}
+.hero p{color:#ccc;}
+
+.games{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+  padding:25px;
+}
+
+.card{
+  background:rgba(255,255,255,0.06);
+  border-radius:12px;
+  padding:15px;
+  text-align:center;
+  transition:0.3s;
+}
+.card:hover{transform:scale(1.05);}
+
+.card img{
+  width:100%;
+  border-radius:8px;
+}
+
+.card h3{margin:10px 0;}
+.card p{font-size:14px;color:#ccc;}
+
+.info{
+  font-size:12px;
+  color:#aaa;
+  display:block;
+  margin-bottom:10px;
+}
+
+.download{
+  display:block;
+  margin:6px 0;
+  padding:9px;
+  border-radius:18px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#000;
+  background:#ffcc00;
+}
+
+.note{
+  font-size:12px;
+  color:#aaa;
+  margin-top:6px;
+}
+
+footer{
+  background:#000;
+  text-align:center;
+  padding:14px;
+  font-size:12px;
+  color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>NovaForge Studeeo</h1>
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>📱 Keypad Phone Games</h2>
+  <p>Classic Java games for feature phones</p>
+</section>
+
+<section class="games">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/240x160">
+    <h3>Snake Classic+</h3>
+    <p>Old-school snake game for keypad phones</p>
+    <span class="info">Java J2ME • 240×320 • 120 KB</span>
+    <a class="download" href="games/snake.jar">⬇ Download .JAR</a>
+    <a class="download" href="games/snake.jad">⬇ Download .JAD</a>
+    <div class="note">Install on Java-enabled phone</div>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/240x160">
+    <h3>Car Racer Mini</h3>
+    <p>Top-down racing for keypad mobiles</p>
+    <span class="info">Java J2ME • 176×220 • 180 KB</span>
+    <a class="download" href="games/car-racer.jar">⬇ Download .JAR</a>
+    <a class="download" href="games/car-racer.jad">⬇ Download .JAD</a>
+    <div class="note">Works on Nokia, Samsung, Micromax</div>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 NovaForge Studeeo • Keypad Phone • Made in India 🇮🇳
+</footer>
+
+</body>
+</html>

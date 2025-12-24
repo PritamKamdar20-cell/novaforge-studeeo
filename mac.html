@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mac Games | NovaForge Studeeo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#050b2e,#1a0a3d);
+  color:#fff;
+}
+header{
+  background:#05081c;
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1{color:#8aa2ff;}
+nav a{
+  margin-left:15px;
+  color:#bbb;
+  text-decoration:none;
+}
+nav a:hover{color:#fff;}
+
+.hero{
+  text-align:center;
+  padding:50px 20px;
+}
+.hero h2{
+  font-size:34px;
+  color:#b28cff;
+}
+.hero p{color:#ccc;}
+
+.games{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  padding:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.06);
+  border-radius:14px;
+  padding:15px;
+  text-align:center;
+  transition:0.3s;
+}
+.card:hover{transform:scale(1.05);}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+}
+
+.card h3{margin:10px 0;}
+.card p{
+  font-size:14px;
+  color:#ccc;
+}
+
+.info{
+  font-size:12px;
+  color:#aaa;
+  margin-bottom:10px;
+  display:block;
+}
+
+.download{
+  display:inline-block;
+  padding:10px 22px;
+  background:linear-gradient(135deg,#8b6cff,#b18cff);
+  color:#fff;
+  border-radius:20px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.download:hover{opacity:0.85;}
+
+.note{
+  font-size:12px;
+  color:#999;
+  margin-top:8px;
+}
+
+footer{
+  background:#05081c;
+  text-align:center;
+  padding:15px;
+  font-size:13px;
+  color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>NovaForge Studeeo</h1>
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>🍎 macOS Games</h2>
+  <p>Official Mac games by NovaForge Studeeo</p>
+</section>
+
+<section class="games">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300x180">
+    <h3>Speed Racer 3D</h3>
+    <p>High-speed arcade racing game</p>
+    <span class="info">macOS 10.15+ • 250 MB • DMG</span>
+    <a class="download" href="games/speed-racer-mac.dmg">⬇ Download for Mac</a>
+    <div class="note">If blocked → Right-click → Open</div>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300x180">
+    <h3>Survival Land</h3>
+    <p>Open-world survival adventure</p>
+    <span class="info">macOS 11+ • 420 MB • ZIP</span>
+    <a class="download" href="games/survival-land-mac.zip">⬇ Download for Mac</a>
+    <div class="note">Extract ZIP → Open app</div>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 NovaForge Studeeo • macOS • Made in India 🇮🇳
+</footer>
+
+</body>
+</html>

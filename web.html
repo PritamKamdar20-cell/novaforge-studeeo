@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaForge Studeeo | Web Games</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI,Arial;
+  background:linear-gradient(135deg,#0b102b,#2b0f4d);
+  color:white;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:40px 20px;
+}
+header h1{
+  font-size:42px;
+  margin:0;
+}
+header p{
+  opacity:.8;
+}
+
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:15px;
+  background:rgba(0,0,0,.4);
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
+nav a:hover{color:#a970ff}
+
+/* GAME GRID */
+.games{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  padding:30px;
+}
+
+.game{
+  background:rgba(0,0,0,.45);
+  border-radius:18px;
+  overflow:hidden;
+  transition:.3s;
+}
+.game:hover{transform:scale(1.05)}
+
+.game img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.info{
+  padding:15px;
+}
+.info h3{margin:5px 0}
+.info p{
+  font-size:14px;
+  opacity:.75;
+}
+
+.play-btn{
+  margin-top:12px;
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#6a00ff;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+}
+.play-btn:hover{background:#9a5cff}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:.7;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+header h1{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>NovaForge Studeeo</h1>
+  <p>Play Free Web Games Online</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+</nav>
+
+<section class="games">
+
+  <!-- GAME 1 -->
+  <div class="game">
+    <img src="https://via.placeholder.com/400x200">
+    <div class="info">
+      <h3>Pixel Runner</h3>
+      <p>Fast-paced HTML5 platformer</p>
+      <button class="play-btn" onclick="playGame('game1.html')">
+        ▶ Play Now
+      </button>
+    </div>
+  </div>
+
+  <!-- GAME 2 -->
+  <div class="game">
+    <img src="https://via.placeholder.com/400x200">
+    <div class="info">
+      <h3>Space Blaster</h3>
+      <p>Arcade shooter in browser</p>
+      <button class="play-btn" onclick="playGame('game2.html')">
+        ▶ Play Now
+      </button>
+    </div>
+  </div>
+
+  <!-- GAME 3 -->
+  <div class="game">
+    <img src="https://via.placeholder.com/400x200">
+    <div class="info">
+      <h3>Car Drift</h3>
+      <p>Top-down drifting challenge</p>
+      <button class="play-btn" onclick="playGame('game3.html')">
+        ▶ Play Now
+      </button>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 NovaForge Studeeo • Web Games Only • Made in India 🇮🇳
+</footer>
+
+<script>
+function playGame(page){
+  window.location.href = page;
+}
+</script>
+
+</body>
+</html>
