@@ -17,15 +17,14 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
 
   emailjs.sendForm(
-    "service 2gcfd78",
+    "service_2gcfd78",   // ✅ Correct
     "template_lg2ithx",
     this
   ).then(() => {
     alert("Message sent successfully!");
     this.reset();
-  }, (error) => {
-    alert("Failed to send message!");
-    console.log(error);
+  }).catch((error) => {
+    alert("Failed to send message");
+    console.error(error);
   });
 });
-
