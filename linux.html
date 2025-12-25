@@ -96,6 +96,23 @@ footer{
   font-size:13px;
   color:#8f8f8f;
 }
+  #searchInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #0b0f2b;
+  color: white;
+}
+
+.card{
+  list-style: none;
+  padding: 8px;
+  background: #151a4a;
+  margin: 5px 0;
+  border-radius: 5px;
+  }
 </style>
 </head>
 
@@ -107,7 +124,9 @@ footer{
     <a href="index.html">Home</a>
   </nav>
 </header>
+<input type="text" id="searchInput" placeholder="Search games or apps..." onkeyup="searchItems()">
 
+  
 <section class="hero">
   <h2>🐧 Linux Games</h2>
   <p>Native Linux games by NovaForge Studeeo</p>
@@ -129,8 +148,24 @@ footer{
 <footer>
   © 2025 NovaForge Studeeo • Linux • Made in India 🇮🇳
 </footer>
+<script>
+function searchItems() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let cards = document.getElementsByClassName("card");
 
+  for (let i = 0; i < cards.length; i++) {
+    let title = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+
+    if (title.includes(input)) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+  </script>
 </body>
 </html>
+
 
 
