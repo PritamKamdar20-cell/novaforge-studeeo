@@ -103,6 +103,23 @@ footer{
   font-size:12px;
   color:#8f8f8f;
 }
+  #searchInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #0b0f2b;
+  color: white;
+}
+
+.card{
+  list-style: none;
+  padding: 8px;
+  background: #151a4a;
+  margin: 5px 0;
+  border-radius: 5px;
+                  }
 </style>
 </head>
 
@@ -114,6 +131,8 @@ footer{
     <a href="index.html">Home</a>
   </nav>
 </header>
+<input type="text" id="searchInput" placeholder="Search games or apps..." onkeyup="searchItems()">
+
 
 <section class="hero">
   <h2>🤖 Android Games</h2>
@@ -140,9 +159,20 @@ footer{
 <footer>
   © 2025 NovaForge Studeeo • Android • Made in India 🇮🇳
 </footer>
+<script>
+function searchItems() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let items = document.getElementByclass("card").getElementsByTagName("h3");
 
+  for (let i = 0; i < items.length; i++) {
+    let text = items[i].innerText.toLowerCase();
+    items[i].style.display = text.includes(input) ? "" : "none";
+  }
+}
+</script>
 </body>
 </html>
+
 
 
 
