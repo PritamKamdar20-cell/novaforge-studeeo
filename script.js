@@ -17,8 +17,8 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
 
   emailjs.sendForm(
-    "YOUR_SERVICE_ID",
-    "YOUR_TEMPLATE_ID",
+    "service 2gcfd78",
+    "template_lg2ithx",
     this
   ).then(() => {
     alert("Message sent successfully!");
@@ -28,3 +28,4 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     console.log(error);
   });
 });
+
