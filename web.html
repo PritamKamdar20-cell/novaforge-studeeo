@@ -96,6 +96,23 @@ footer{
 @media(max-width:600px){
 header h1{font-size:30px}
 }
+  #searchInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #0b0f2b;
+  color: white;
+}
+
+.card{
+  list-style: none;
+  padding: 8px;
+  background: #151a4a;
+  margin: 5px 0;
+  border-radius: 5px;
+}
 </style>
 </head>
 
@@ -109,7 +126,7 @@ header h1{font-size:30px}
 <nav>
   <a href="index.html">Home</a>
 </nav>
-
+<input type="text" id="searchInput" placeholder="Search games or apps..." onkeyup="searchItems()">
 <section class="games">
 
   <!-- GAME 1 -->
@@ -134,8 +151,23 @@ header h1{font-size:30px}
 function playGame(page){
   window.location.href = page;
 }
+function searchItems() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let cards = document.getElementsByClassName("card");
+
+  for (let i = 0; i < cards.length; i++) {
+    let title = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+
+    if (title.includes(input)) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
 </script>
 
 </body>
 </html>
+
 
