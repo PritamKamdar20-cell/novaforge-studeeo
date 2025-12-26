@@ -1,14 +1,14 @@
-// Button click feedback
-document.querySelectorAll(".btn").forEach(button => {
-  button.addEventListener("click", () => {
-    alert(`${button.innerText} coming soon!`);
-  });
+// Mobile menu toggle
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 
-// Navbar item click
-document.querySelectorAll(".nav-links li").forEach(item => {
-  item.addEventListener("click", () => {
-    console.log(`${item.innerText} clicked`);
+// OS button placeholder
+document.querySelectorAll(".os-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    console.log(btn.innerText + " selected");
   });
 });
-
