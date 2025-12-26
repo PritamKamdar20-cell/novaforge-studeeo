@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Create Account</h2>
 
+<input id="u" placeholder="Username"><br>
+<input id="p" type="password" placeholder="Password"><br>
+<input id="c" type="password" placeholder="Confirm Password"><br>
+
+<button onclick="signup()">Create Account</button>
+
+<p id="msg"></p>
+
+<script>
+function signup() {
+  fetch("/signup", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({
+      username: u.value,
+      password: p.value,
+      confirmPassword: c.value
+    })
+  })
+  .then(r => r.json())
+  .then(d => msg.innerText = d.error || d.success);
+}
+</script>
+</body>
+</html>
