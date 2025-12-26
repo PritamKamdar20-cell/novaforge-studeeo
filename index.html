@@ -5,6 +5,9 @@
   <title>NovaForge Soft-Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="logo.png">
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,7 +16,10 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <h1 class="logo">NovaForge</h1>
-    <ul class="nav-links">
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <ul class="nav-links" id="navLinks">
       <li>News</li>
       <li>About</li>
       <li>Comment</li>
@@ -21,24 +27,29 @@
     </ul>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h2>NovaForge Soft-Store</h2>
-    <p>Forge • Download • Play • Anywhere</p>
+  <!-- HERO -->
+  <main class="content">
+    <section class="hero">
+      <h2>NovaForge Soft-Store</h2>
+      <p>Forge • Build • Experience</p>
 
-    <!-- DOWNLOAD BUTTONS -->
-    <div class="buttons">
-      <button class="btn linux">🐧 Linux Download</button>
-      <button class="btn mac">🍎 Mac Download</button>
-      <button class="btn windows">🪟 Windows Download</button>
-      <button class="btn android">🤖 Android Download</button>
-      <button class="btn web">🌐 Web Play</button>
-      <button class="btn keypad">⌨️ Keypad Download</button>
-    </div>
-  </section>
+      <!-- OS BOX -->
+      <div class="os-box">
+        <button class="os-btn">Linux</button>
+        <button class="os-btn">MacOS</button>
+        <button class="os-btn">Windows</button>
+        <button class="os-btn">Android</button>
+        <button class="os-btn">Web</button>
+        <button class="os-btn">Keypad</button>
+      </div>
+    </section>
+  </main>
 
-  <!-- JS -->
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 NovaForge studeeo • Student project • made in India
+  </footer>
+
   <script src="script.js"></script>
 </body>
-  </html>
-
+</html>
