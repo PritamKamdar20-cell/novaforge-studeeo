@@ -1,1 +1,117 @@
+:root {
+  --bg-main: #0b0b12;
+  --blue: #2563eb;
+  --purple: #7c3aed;
+  --glass: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1a1a2e, var(--bg-main));
+  color: white;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+  color: var(--blue);
+  font-size: 22px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--purple));
+  transition: 0.3s;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  background: linear-gradient(90deg, var(--blue), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 14px;
+  opacity: 0.85;
+}
+
+/* BUTTON GRID */
+.buttons {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* BUTTON BASE */
+.btn {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: var(--glass);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* BUTTON TYPES */
+.linux { box-shadow: 0 0 18px #2563eb44; }
+.mac { box-shadow: 0 0 18px #7c3aed44; }
+.windows { background: linear-gradient(135deg, var(--blue), var(--purple)); }
+.android { border-color: var(--blue); }
+.web { border: 2px dashed var(--purple); }
+.keypad { background: rgba(0,0,0,0.6); }
+
+/* HOVER */
+.btn:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 0 25px var(--blue);
+  }
 
