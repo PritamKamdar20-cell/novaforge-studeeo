@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Login</h2>
 
+<input id="u" placeholder="Username"><br>
+<input id="p" type="password" placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+<button onclick="del()">Delete Account</button>
+
+<p id="msg"></p>
+
+<script>
+function login() {
+  fetch("/login", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ username: u.value, password: p.value })
+  })
+  .then(r => r.json())
+  .then(d => msg.innerText = d.error || d.success);
+}
+
+function del() {
+  fetch("/delete", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ username: u.value, password: p.value })
+  })
+  .then(r => r.json())
+  .then(d => msg.innerText = d.error || d.success);
+}
+</script>
+</body>
+</html>
